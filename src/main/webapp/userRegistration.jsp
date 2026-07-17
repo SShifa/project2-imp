@@ -9,7 +9,7 @@
     Connection con = DriverManager.getConnection("jdbc:mysql://172.31.36.209:3306/loginapp",
             "root", "root123");
     Statement st = con.createStatement();
-    int i = st.executeUpdate("insert into USER(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','" 
+    int i = st.executeUpdate("insert into user(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','" 
     + lastName + "','" + email + "','" + userName + "','" + password + "', CURDATE())");
     if (i > 0) {
         response.sendRedirect("welcome.jsp");
